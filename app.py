@@ -7,7 +7,7 @@ import io
 import plotly.graph_objs as go
 
 # %%
-data = pd.read_csv("C:/Users/nblau\Documents/Ds 4003/data.csv")
+data = pd.read_csv("data.csv")
 
 data.loc[data['Id'] == 1, 'Data_Type'] = 'Personal Data'
 data.loc[data['Id'].isin(data['Id'].unique()[:11])& (data['Id'] != 1), 'Data_Type'] = 'Fitbit Users 1-10'
