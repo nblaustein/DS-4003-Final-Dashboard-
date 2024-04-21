@@ -8,7 +8,7 @@ import plotly.graph_objs as go
 import plotly.io as pio
 
 # %%
-data = pd.read_csv("C:/Users/nblau\Documents/Ds 4003/data.csv") #read in the cleaned data 
+data = pd.read_csv("data.csv") #read in the cleaned data 
 #Create new column called Data_Type that will be utilized in the line plot with radio buttons 
 data.loc[data['Id'] == 1, 'Data_Type'] = 'Personal Data' 
 data.loc[data['Id'].isin(data['Id'].unique()[:11])& (data['Id'] != 1), 'Data_Type'] = 'Fitbit Users 1-10'
